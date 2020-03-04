@@ -5,5 +5,6 @@ public enum Genre {
     FANTASY,
     THRILLER,
     HORROR,
+
     BIOGRAPHY
 }

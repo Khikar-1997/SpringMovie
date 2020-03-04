@@ -11,5 +11,4 @@ public class DemoApplication {
         Database.databaseInitializer();
         SpringApplication.run(DemoApplication.class, args);
     }
-
 }

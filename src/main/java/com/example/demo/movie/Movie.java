@@ -5,16 +5,16 @@ import java.util.Objects;
 public class Movie {
     private String name;
     private String genre;
-    private String duretion;
+    private String duration;
 
-    public Movie(String name, String genre, String duretion) {
+    public Movie(String name, String genre, String duration) {
         this.name = name;
         if (genre.equals(String.valueOf(Genre.valueOf(genre)))){
             this.genre = genre;
         } else {
             throw new RuntimeException("!!!!!!!");
         }
-        this.duretion = duretion;
+        this.duration = duration;
     }
 
     public Movie() {
@@ -36,12 +36,12 @@ public class Movie {
         this.genre = genre;
     }
 
-    public String getDuretion() {
-        return duretion;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setDuretion(String duretion) {
-        this.duretion = duretion;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     @Override
@@ -51,12 +51,12 @@ public class Movie {
         Movie movie = (Movie) o;
         return Objects.equals(name, movie.name) &&
                 Objects.equals(genre, movie.genre) &&
-                Objects.equals(duretion, movie.duretion);
+                Objects.equals(duration, movie.duration);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, genre, duretion);
+        return Objects.hash(name, genre, duration);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Movie {
         return "Movie{" +
                 "name='" + name + '\'' +
                 ", genre='" + genre + '\'' +
-                ", duretion='" + duretion + '\'' +
+                ", duration='" + duration + '\'' +
                 '}';
     }
 }

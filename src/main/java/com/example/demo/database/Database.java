@@ -15,7 +15,7 @@ public class Database {
 
     private void createDatabase() {
         try (Connection conn = DriverManager.getConnection(MariaDbConstant.DB_URL_SEREVER, MariaDbConstant.USER, MariaDbConstant.PASS)) {
-            String query = "CREATE DATABASE movie";
+            String query = "CREATE DATABASE kino";
             PreparedStatement preparedStatement = conn.prepareStatement(query);
             preparedStatement.execute();
         } catch (SQLException ex) {
@@ -25,7 +25,7 @@ public class Database {
 
     private void createMovieTable() {
         try (Connection conn = DriverManager.getConnection(MariaDbConstant.DB_URL, MariaDbConstant.USER, MariaDbConstant.PASS)) {
-            String query = "CREATE TABLE movie" +
+            String query = "CREATE TABLE kino" +
                     "(" +
                     "id INT NOT NULL AUTO_INCREMENT," +
                     "name VARCHAR(255) NOT NULL ," +
@@ -34,7 +34,7 @@ public class Database {
                     "    'THRILLER'," +
                     "    'HORROR'," +
                     "    'BIOGRAPHY')," +
-                    "duretion VARCHAR(255) NOT NULL ," +
+                    "duration VARCHAR(255) NOT NULL ," +
                     "PRIMARY KEY (id)" +
                     ");";
             PreparedStatement preparedStatement = conn.prepareStatement(query);

@@ -5,5 +5,5 @@ public class MariaDbConstant {
     public static String PASS = "root";
 
     public static String DB_URL_SEREVER = "jdbc:mariadb://127.0.0.1";
-    public static String DB_URL = "jdbc:mariadb://127.0.0.1/movie";
+    public static String DB_URL = "jdbc:mariadb://127.0.0.1/kino";
 }
