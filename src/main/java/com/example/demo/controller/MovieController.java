@@ -34,8 +34,7 @@ public class MovieController {
     }
 
     @PutMapping(value = "/movie/{id}")
-    public @ResponseBody
-    void update(@PathVariable int id, @RequestBody Movie movie) {
+    public void update(@PathVariable int id, @RequestBody Movie movie) {
         movieService.update(movie,id);
     }
 
